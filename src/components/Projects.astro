@@ -1,75 +1,6 @@
 ---
-import Image from 'astro/components/Image.astro'
-import imageBalloon from '../../public/balloon-cropped.png'
-import imageElefantes from '../../public/elefantes.png'
-
-import type { Code, Debug } from 'astro:components'
 import ProjectItemCard from './ProjectItemCard.astro'
-
-interface PortfolioItemProps {
-	id: number
-	title: string
-	buttonLive: string
-	buttonCode: string
-	buttonInfo: string
-	isLive: Boolean
-	imageUrl: ImageMetadata
-	description: string
-	status?: string
-	techLogos: string[]
-	linkLive: string | undefined
-	linkCode: string
-	technologies: string[]
-	popupDescription: any
-}
-
-const portfolioData: PortfolioItemProps[] = [
-	{
-		id: 1,
-		title: 'EL VIAJE DE LOS ELEFANTES',
-		buttonLive: '',
-		buttonCode: '',
-		buttonInfo: '',
-		isLive: true,
-		imageUrl: imageElefantes,
-		description: 'Lorem ipsum',
-		techLogos: ['/js.png', '/node-logo.png', '/css.png', '/html.png'],
-		linkLive: 'https://elviajedeloselefantesbeta.com/',
-		linkCode: '#',
-		technologies: ['Wordpress', 'html', 'css', 'Javascript', 'Php'],
-		popupDescription: ''
-	},
-	{
-		id: 2,
-		title: 'BALLOON APP',
-		buttonLive: '',
-		buttonCode: '',
-		buttonInfo: '',
-		isLive: true,
-		imageUrl: imageBalloon,
-		description: 'Lorem ipsum',
-		techLogos: ['/js.png', '/react.png'],
-		linkLive: 'https://balloon.balloonapp.net/',
-		linkCode: 'https://github.com/danipereiracodes/Balloon_Front',
-		technologies: ['Html', 'CSS', 'Javascript', 'Reactjs', 'Nodejs', 'Express', 'Sql'],
-		popupDescription: ''
-	},
-	{
-		id: 1,
-		title: 'EL VIAJE DE LOS ELEFANTES',
-		buttonLive: '',
-		buttonCode: '',
-		buttonInfo: '',
-		isLive: true,
-		imageUrl: imageElefantes,
-		description: 'Lorem ipsum',
-		techLogos: ['/js.png', '/node-logo.png', '/css.png', '/html.png'],
-		linkLive: 'https://elviajedeloselefantes.com/',
-		linkCode: '#',
-		technologies: ['Wordpress', 'html', 'css', 'Javascript', 'Php'],
-		popupDescription: ''
-	}
-]
+import { portfolioData, type PortfolioItemTypes } from '../lib/data'
 ---
 
 <section class="flex w-full flex-col items-center py-24 text-center">
@@ -82,7 +13,7 @@ const portfolioData: PortfolioItemProps[] = [
 	</div>
 	<article class="grid grid-cols-1 gap-8 p-8 md:grid-cols-2 lg:grid-cols-3">
 		{
-			portfolioData.map((data: PortfolioItemProps) => {
+			portfolioData.map((data: PortfolioItemTypes) => {
 				return <ProjectItemCard link={data.linkLive} {...data} />
 			})
 		}
