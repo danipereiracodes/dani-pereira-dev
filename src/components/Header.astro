@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 import avatar from '../../public/avatar-dani.png'
+import DownloadIcon from '../icons/DownloadIcon.astro'
 ---
 
 <header
@@ -27,21 +28,8 @@ import avatar from '../../public/avatar-dani.png'
 		<div
 			class="mx-auto mt-8 flex w-fit cursor-pointer justify-center gap-2 rounded-2xl bg-[#0072ab] px-4 py-2 text-center text-lg font-bold text-white shadow-2xl"
 		>
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				width="24"
-				height="24"
-				viewBox="0 0 24 24"
-				fill="none"
-				stroke="currentColor"
-				stroke-width="2"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				class="icon icon-tabler icons-tabler-outline icon-tabler-download"
-				><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-					d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path><path d="M7 11l5 5l5 -5"
-				></path><path d="M12 4l0 12"></path></svg
-			>Download Resume
+			<DownloadIcon />
+			Download Resume
 		</div>
 	</div>
 </header>

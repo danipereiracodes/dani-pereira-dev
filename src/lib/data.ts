@@ -29,14 +29,15 @@ export interface ExperienceDataTypes {
 
 export const portfolioData: PortfolioItemTypes[] = [
 	{
-		id: 1,
+		id: 0,
 		title: 'EL VIAJE DE LOS ELEFANTES',
 		buttonLive: '',
 		buttonCode: '',
 		buttonInfo: '',
 		isLive: true,
 		imageUrl: elefantesImage,
-		description: 'Lorem ipsum',
+		description:
+			'Built utilizing the Genesis framework allowed for the creation of a bespoke and lightweight design without themes or page builders, optimizing performance and ensuring a seamless user experience across various devices.',
 		techLogos: ['/js.png', '/node-logo.png', '/css.png', '/html.png'],
 		linkLive: 'https://elviajedeloselefantesbeta.com/',
 		linkCode: '#',
@@ -44,33 +45,19 @@ export const portfolioData: PortfolioItemTypes[] = [
 		popupDescription: ''
 	},
 	{
-		id: 2,
+		id: 1,
 		title: 'BALLOON APP',
 		buttonLive: '',
 		buttonCode: '',
 		buttonInfo: '',
 		isLive: true,
 		imageUrl: balloonImage,
-		description: 'Lorem ipsum',
+		description:
+			'E-commerce web application developed with cutting-edge technologies. This platform, built with React.js for the frontend and Node.js with Express.js for the backend, represents a milestone in my career as a developer.',
 		techLogos: ['/js.png', '/react.png'],
 		linkLive: 'https://balloon.balloonapp.net/',
 		linkCode: 'https://github.com/danipereiracodes/Balloon_Front',
 		technologies: ['Html', 'CSS', 'Javascript', 'Reactjs', 'Nodejs', 'Express', 'Sql'],
-		popupDescription: ''
-	},
-	{
-		id: 1,
-		title: 'EL VIAJE DE LOS ELEFANTES',
-		buttonLive: '',
-		buttonCode: '',
-		buttonInfo: '',
-		isLive: true,
-		imageUrl: elefantesImage,
-		description: 'Lorem ipsum',
-		techLogos: ['/js.png', '/node-logo.png', '/css.png', '/html.png'],
-		linkLive: 'https://elviajedeloselefantes.com/',
-		linkCode: '#',
-		technologies: ['Wordpress', 'html', 'css', 'Javascript', 'Php'],
 		popupDescription: ''
 	}
 ]

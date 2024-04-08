@@ -1,6 +1,8 @@
 ---
 import { map } from 'astro/zod'
 import { experienceData, type ExperienceDataTypes } from '../lib/data'
+import CodeIcon from '../icons/CodeIcon.astro'
+import ComputerIcon from '../icons/ComputerIcon.astro'
 ---
 
 <section class="flex w-full flex-col gap-8 py-24 lg:w-1/2 lg:py-8">
@@ -13,71 +15,32 @@ import { experienceData, type ExperienceDataTypes } from '../lib/data'
 	</div>
 
 	{
-		experienceData.map(({ company, position, dates, achievements, isFront }) => {
-			return (
-				<div class="false relative rounded-2xl bg-gradient-to-r p-6 shadow-xl hover:shadow-2xl">
-					<div class="flex items-center gap-2 text-gray-900">
-						{isFront ? (
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="30"
-								height="30"
-								viewBox="0 0 30 30"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								class="icon icon-tabler icons-tabler-outline icon-tabler-code"
-							>
-								<>
-									<path stroke="none" d="M0 0h30v30H0z" fill="none" />
-									<path d="M7 8l-4 4l4 4" />
-									<path d="M17 8l4 4l-4 4" />
-									<path d="M14 4l-4 16" />
-								</>
-							</svg>
-						) : (
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="24"
-								height="24"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								class="icon icon-tabler icons-tabler-outline icon-tabler-devices-2"
-							>
-								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-								<path d="M10 15h-6a1 1 0 0 1 -1 -1v-8a1 1 0 0 1 1 -1h6" />
-								<path d="M13 4m0 1a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-6a1 1 0 0 1 -1 -1z" />
-								<path d="M7 19l3 0" />
-								<path d="M17 8l0 .01" />
-								<path d="M17 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-								<path d="M9 15l0 4" />
-							</svg>
-						)}
-						<h3 class="text-2xl font-bold text-gray-900">{position}</h3>
-					</div>
-					<p class="text-md pb-4 font-bold text-slate-500">{company}</p>
-					<span class="text-xs italic text-gray-900">{dates}</span>
-					<hr class="mb-4" />
+		experienceData.map(
+			({ company, position, dates, achievements, isFront }: ExperienceDataTypes) => {
+				return (
+					<div class="false relative rounded-2xl bg-gradient-to-r p-6 shadow-xl hover:shadow-2xl">
+						<div class="flex items-center gap-2 text-gray-900">
+							{isFront ? <CodeIcon /> : <ComputerIcon />}
+							<h3 class="text-2xl font-bold text-gray-900">{position}</h3>
+						</div>
+						<p class="text-md pb-4 font-bold text-slate-500">{company}</p>
+						<span class="text-xs italic text-gray-900">{dates}</span>
+						<hr class="mb-4" />
 
-					<details name="work-experience" class="cursor-pointer">
-						<summary>More info</summary>
-						<p class="mt-8 text-lg font-medium leading-snug tracking-wide text-gray-900">
-							{achievements[0]}
-							<>
-								<br />
-								<br />
-							</>
-							{achievements[1]}
-						</p>
-					</details>
-				</div>
-			)
-		})
+						<details name="work-experience" class="cursor-pointer">
+							<summary>More info</summary>
+							<p class="mt-8 text-lg font-medium leading-snug tracking-wide text-gray-900">
+								{achievements[0]}
+								<>
+									<br />
+									<br />
+								</>
+								{achievements[1]}
+							</p>
+						</details>
+					</div>
+				)
+			}
+		)
 	}
 </section>
