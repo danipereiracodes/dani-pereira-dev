@@ -1,7 +1,7 @@
 ---
-const { href } = Astro.props
+const { href, customClass } = Astro.props
 ---
 
-<a href={href} target="_blank">
+<a href={href} target="_blank" class={customClass}>
 	<slot />
 </a>
