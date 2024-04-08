@@ -2,6 +2,7 @@
 import Image from 'astro/components/Image.astro'
 import imageBalloon from '../../public/balloon-cropped.png'
 import imageElefantes from '../../public/elefantes.png'
+import Link from './Link.astro'
 
 interface PortfolioItemProps {
 	id: number
@@ -61,7 +62,7 @@ const portfolioData = [
 		imageUrl: imageElefantes,
 		description: 'Lorem ipsum',
 		techLogos: ['/js.png', '/node-logo.png', '/css.png', '/html.png'],
-		linkLive: 'https://elviajedeloselefantesbeta.com/',
+		linkLive: 'https://elviajedeloselefantes.com/',
 		linkCode: '#',
 		technologies: ['Wordpress', 'html', 'css', 'Javascript', 'Php'],
 		popupDescription: ''
@@ -79,11 +80,11 @@ const portfolioData = [
 	</div>
 	<article class="grid grid-cols-1 gap-8 p-8 md:grid-cols-2 lg:grid-cols-3">
 		{
-			portfolioData.map(({ title, description, technologies, imageUrl }) => {
+			portfolioData.map(({ title, description, technologies, imageUrl, linkLive }) => {
 				return (
-					<a
-						class="bg-dark-50 dark:bg-dark-900 dark:border-dark-700 group min-h-full  rounded-xl shadow-2xl lg:max-w-full"
-						href="/"
+					<Link
+						customClass="bg-dark-50 dark:bg-dark-900 dark:border-dark-700 group min-h-full  rounded-xl shadow-2xl lg:max-w-full"
+						href={linkLive}
 					>
 						<div class="relative h-48 w-full overflow-hidden overflow-hidden rounded-t-xl">
 							<span class="bg-dark-600/50 text-dark-100 absolute right-2 top-2 z-10 z-20 mx-auto rounded-lg px-2 py-1 text-sm font-semibold backdrop-blur-md" />
@@ -114,7 +115,7 @@ const portfolioData = [
 								})}
 							</ul>
 						</div>
-					</a>
+					</Link>
 				)
 			})
 		}
