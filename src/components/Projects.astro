@@ -72,17 +72,17 @@ const portfolioData = [
 <section class="flex w-full flex-col items-center py-24 text-center">
 	<div class="mx-auto">
 		<h3
-			class="mb-8 bg-gradient-to-t from-black to-gray-400 bg-clip-text text-center text-xl font-bold text-transparent md:text-3xl lg:break-words lg:text-4xl"
+			class="mb-8 bg-gradient-to-t from-black to-gray-400 bg-clip-text text-center text-3xl font-bold text-transparent md:text-3xl lg:break-words lg:text-4xl"
 		>
 			Projects
 		</h3>
 	</div>
-	<article class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+	<article class="grid grid-cols-1 gap-8 p-8 md:grid-cols-2 lg:grid-cols-3">
 		{
 			portfolioData.map(({ title, description, technologies, imageUrl }) => {
 				return (
 					<a
-						class="bg-dark-50 dark:bg-dark-900 dark:border-dark-700 group min-h-full max-w-sm rounded-xl shadow-2xl lg:max-w-full"
+						class="bg-dark-50 dark:bg-dark-900 dark:border-dark-700 group min-h-full  rounded-xl shadow-2xl lg:max-w-full"
 						href="/"
 					>
 						<div class="relative h-48 w-full overflow-hidden overflow-hidden rounded-t-xl">
