@@ -16,7 +16,7 @@ import ComputerIcon from '../icons/ComputerIcon.astro'
 
 	{
 		experienceData.map(
-			({ company, position, dates, achievements, isFront }: ExperienceDataTypes) => {
+			({ company, position, dates, achievements, isFront, id }: ExperienceDataTypes) => {
 				return (
 					<div class="false relative rounded-2xl bg-gradient-to-r p-6 shadow-xl hover:shadow-2xl">
 						<div class="flex items-center gap-2 text-gray-900">
@@ -27,8 +27,14 @@ import ComputerIcon from '../icons/ComputerIcon.astro'
 						<span class="text-xs italic text-gray-900">{dates}</span>
 						<hr class="mb-4" />
 
-						<details name="work-experience" class="cursor-pointer">
-							<summary>More info</summary>
+						<details name="work-experience" class="cursor-pointer ">
+							<summary>
+								<>
+									<span class="arrow">▼</span>
+									<span class="hidden open:bg-green-400 open:text-gray-400">Open details</span>
+								</>
+								<span class="closed:text-gray-400 hidden">Close details</span>
+							</summary>
 							<p class="mt-8 text-lg font-medium leading-snug tracking-wide text-gray-900">
 								{achievements[0]}
 								<>
@@ -44,3 +50,48 @@ import ComputerIcon from '../icons/ComputerIcon.astro'
 		)
 	}
 </section>
+
+<style>
+	details > summary {
+		list-style: none;
+	}
+	details > summary::-webkit-details-marker {
+		display: none;
+	}
+
+	details[open] summary .closed {
+		display: none;
+	}
+	details:not([open]) summary .open {
+		display: none;
+	}
+	details[open] summary .open {
+		display: inline;
+	}
+	details:not([open]) summary .closed {
+		display: inline;
+	}
+
+	details summary::after {
+		content: 'More info';
+	}
+
+	details[open] summary::after {
+		content: 'Close Info';
+	}
+
+	details summary .arrow {
+		position: absolute;
+		left: 0;
+		transition: transform 0.3s ease; /* Smooth animation */
+	}
+
+	details[open] summary .arrow {
+		transform: rotate(180deg); /* Rotate arrow when details open */
+	}
+
+	details summary {
+		position: relative;
+		padding-left: 20px; /* Space for the arrow */
+	}
+</style>
