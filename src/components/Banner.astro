@@ -1,0 +1,38 @@
+---
+import { Image } from 'astro:assets'
+import avatar from '../../public/danipereiradev-logo2.png'
+import DownloadIcon from '../icons/DownloadIcon.astro'
+---
+
+<section
+	class="relative z-20 -mt-16 flex h-[75vh] flex-col items-center justify-center gap-4 bg-white bg-cover lg:px-0 dark:bg-[url('../../public/dani-desk.jpeg')] dark:bg-cover dark:bg-center dark:bg-no-repeat dark:text-white"
+>
+	<div class="overlay absolute inset-0 opacity-70 dark:bg-black"></div>
+	<a href="/" class="z-20">
+		<Image
+			width={100}
+			class="rounded-full"
+			loading="eager"
+			src={avatar}
+			alt="icon Logo danipereira.dev"
+		/>
+	</a>
+
+	<div class="z-20 px-4 text-center md:w-2/3 lg:w-1/2">
+		<h1
+			class="text-primary-color mb-4 text-center text-4xl font-extrabold lg:text-5xl dark:text-white"
+		>
+			Frontend Software Developer
+		</h1>
+		<h2 class="text-xl">
+			⚠ I&apos;m doing a colossal clean-up in my portfolio and GitHub account, but please
+			don&apos;t hesitate to ask for more projects.
+		</h2>
+		<div
+			class="bg-secondary-color mx-auto mt-8 flex w-fit cursor-pointer justify-center gap-2 rounded-2xl px-4 py-2 text-center text-lg font-bold text-white shadow-2xl"
+		>
+			<DownloadIcon />
+			Download Resume
+		</div>
+	</div>
+</section>

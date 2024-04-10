@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets'
-const { linkLive, title, description, imageUrl, technologies } = Astro.props
+const { linkLive, title, description, imageUrl, technologies, dateStart } = Astro.props
 ---
 
 <div
@@ -72,7 +72,7 @@ const { linkLive, title, description, imageUrl, technologies } = Astro.props
 		</div>
 	</a>
 
-	<ul class="text-dark-700 dark:text-dark-200 mb-4 flex flex-wrap gap-1 px-4 text-sm">
+	<ul class="text-dark-700 dark:text-dark-200 mb-4 flex flex-wrap gap-2 px-4 text-sm">
 		{
 			technologies.map((technology: string[]) => {
 				return (
