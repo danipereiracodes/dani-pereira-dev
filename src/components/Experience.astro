@@ -1,5 +1,4 @@
 ---
-import { map } from 'astro/zod'
 import { experienceData, type ExperienceDataTypes } from '../lib/data'
 import CodeIcon from '../icons/CodeIcon.astro'
 import ComputerIcon from '../icons/ComputerIcon.astro'
@@ -16,14 +15,14 @@ import ComputerIcon from '../icons/ComputerIcon.astro'
 
 	{
 		experienceData.map(
-			({ company, position, dates, achievements, isFront, id }: ExperienceDataTypes) => {
+			({ company, position, dates, achievements, isFront }: ExperienceDataTypes) => {
 				return (
 					<div class="false relative rounded-2xl bg-gradient-to-r p-6 shadow-xl hover:shadow-2xl">
 						<div class="flex items-center gap-2 text-gray-900">
 							{isFront ? <CodeIcon /> : <ComputerIcon />}
-							<h3 class="text-2xl font-bold text-gray-900">{position}</h3>
+							<h3 class="text-secondary-color text-2xl font-bold">{position}</h3>
 						</div>
-						<p class="text-md pb-4 font-bold text-slate-500">{company}</p>
+						<p class="text-md text-primary-color pb-4 font-bold">{company}</p>
 						<span class="text-xs italic text-gray-900">{dates}</span>
 						<hr class="mb-4" />
 
