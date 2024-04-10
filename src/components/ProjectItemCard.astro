@@ -4,7 +4,7 @@ const { linkLive, title, description, imageUrl, technologies } = Astro.props
 ---
 
 <div
-	class="bg-dark-50 dark:bg-dark-900 dark:border-dark-700 lg:max-w-2/3 group min-h-full rounded-xl shadow-xl hover:shadow-2xl"
+	class="dark:bg-dark-background lg:max-w-2/3 group min-h-full rounded-xl shadow-xl hover:shadow-2xl dark:text-white"
 >
 	<a href={linkLive}>
 		<div class="group relative h-48 w-full overflow-hidden overflow-hidden rounded-t-xl">
@@ -76,7 +76,7 @@ const { linkLive, title, description, imageUrl, technologies } = Astro.props
 		{
 			technologies.map((technology: string[]) => {
 				return (
-					<li class="border-dark-200 dark:border-dark-800 bg-dark-300/60 dark:bg-dark-800  bg-secondary-color rounded-md border px-2 py-1 font-mono text-xs text-white">
+					<li class=" dark:bg-dark-secondary bg-secondary-color rounded-md border px-2 py-1 font-mono text-xs text-white">
 						{technology}
 					</li>
 				)
