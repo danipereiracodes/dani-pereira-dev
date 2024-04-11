@@ -1,39 +1,31 @@
 ---
-import { Image } from 'astro:assets'
-import imageDesk from '../../public/dani-desk.jpeg'
+
 ---
 
-<section class="mx-auto flex w-full flex-col items-center pb-24 text-center lg:w-1/2">
+<section
+	class="text-primary-color mx-auto flex grid w-full items-center pb-24 text-center lg:w-1/2 dark:text-white"
+>
 	<div class="flex flex-col">
 		<h3
 			class="mb-8 bg-gradient-to-t from-black to-gray-400 bg-clip-text text-center text-xl font-bold text-transparent md:text-3xl lg:break-words lg:text-4xl dark:text-gray-300"
 		>
 			About me
 		</h3>
-		<p class="text-white">
+		<p class="mx-auto flex text-xl lg:max-w-[75%]">
 			As a self-taught web designer and developer, I have honed my skills through dedicated learning
 			and practical experience, surpassing what I could have achieved through freelance work alone.
 			I have independently mastered building and maintaining various E-commerce sites and landing
+			pages, utilizing CMS platforms such as WordPress, WooCommerce, and PrestaShop. As a
+			self-taught web designer and developer, I have honed my skills through dedicated learning and
+			practical experience, surpassing what I could have achieved through freelance work alone. I
+			have independently mastered building and maintaining various E-commerce sites and landing
 			pages, utilizing CMS platforms such as WordPress, WooCommerce, and PrestaShop.
 		</p>
-		<details>
-			<p>
-				My proficiency extends to using page builders like Elementor and DIVI, as well as coding
-				with HTML, CSS, and basic JS. In 2021, I delved deeply into React and its ecosystem,
-				completing an intensive JavaScript course that covered both front-end and back-end
-				development with React, Express JS, and GIT SQL. Transitioning to a role as a Frontend
-				Software Developer, I expanded my expertise to include TypeScript, Frontend Architectures,
-				and microfrontends. I have gained proficiency in App bundlers like Webpack and Vite, and
-				have also continued to enhance my skills with foundational technologies like HTML, CSS, and
-				JS. Throughout my journey, I have worked on challenging projects independently, consistently
-				delivering high-quality and functional products. My portfolio includes successful
-				collaborations with reputable clients such as Ferrovial, Acciona, the Chilean Army, and the
-				Ebro Hydrographic Confederation. Driven by a passion for continuous learning and
-				improvement, I take pride in my ability to learn new technologies autonomously. I thrive in
-				collaborative environments and am always eager to contribute my expertise and support to
-				achieve collective goals.
-			</p>
-			<summary>Read more</summary>
-		</details>
+		<a
+			href="/about-me"
+			class="text-secondary-color mx-auto mt-8 w-fit text-lg font-extrabold underline"
+		>
+			Read More
+		</a>
 	</div>
 </section>

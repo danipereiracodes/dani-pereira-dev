@@ -47,16 +47,18 @@ const Header = () => {
 			id="header"
 			class="bg-secondary-color fixed top-0 z-50 flex h-16 w-full items-center justify-center gap-4 bg-opacity-75 pl-24 font-mono font-extrabold uppercase text-white backdrop-blur-md backdrop-filter transition duration-500 ease-in md:justify-evenly lg:text-lg dark:bg-transparent dark:text-white"
 		>
-			<div class="flex items-center gap-2">
-				<img
-					width={25}
-					src={'/geek-danipereiradev.png'}
-					alt="danipereiradev-icon"
-					loading="eager"
-					class="invert"
-				/>
-				<h1>DANIPEREIRA.DEV</h1>
-			</div>
+			<a href="/">
+				<div class="flex items-center gap-2">
+					<img
+						width={25}
+						src={'/geek-danipereiradev.png'}
+						alt="danipereiradev-icon"
+						loading="eager"
+						class="invert"
+					/>
+					<h1>DANIPEREIRA.DEV</h1>
+				</div>
+			</a>
 
 			<nav class="text-sm">
 				<ul class="flex flex-col items-center gap-12 text-white md:flex-row">
