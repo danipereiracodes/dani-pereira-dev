@@ -1,3 +1,4 @@
+import React from 'preact/compat'
 import { useEffect, useState, useRef } from 'preact/hooks'
 
 const Header = () => {
