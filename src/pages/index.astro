@@ -1,5 +1,6 @@
 ---
 import About from '../components/About.astro'
+import Banner from '../components/Banner.astro'
 import Experience from '../components/Experience.astro'
 import Projects from '../components/Projects.astro'
 import Techs from '../components/Techs.astro'
@@ -7,11 +8,14 @@ import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title="Welcome to Dani Pereira.">
-	<main class="container mx-auto flex h-screen flex-1 flex-col bg-white text-black">
-		<div class="flex w-full flex-col lg:flex-row lg:pt-24">
-			<Experience />
+	<main class="dark:bg-dark-primary mx-auto flex h-screen flex-1 flex-col bg-white text-black">
+		<div class="flex flex-col">
+			<Banner />
+			<div class="container mx-auto flex flex-col lg:flex-row lg:pt-24">
+				<Experience />
 
-			<Techs />
+				<Techs />
+			</div>
 		</div>
 
 		<Projects />

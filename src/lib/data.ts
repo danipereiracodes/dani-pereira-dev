@@ -1,5 +1,6 @@
 import balloonImage from '../../public/balloon-cropped.png'
 import elefantesImage from '../../public/elefantes.png'
+import feelFit from '../../public/feel-fit-app-comin-soon.png'
 
 export interface PortfolioItemTypes {
 	id: number
@@ -58,6 +59,22 @@ export const portfolioData: PortfolioItemTypes[] = [
 		linkLive: 'https://balloon.balloonapp.net/',
 		linkCode: 'https://github.com/danipereiracodes/Balloon_Front',
 		technologies: ['Html', 'CSS', 'Javascript', 'Reactjs', 'Nodejs', 'Express', 'Sql'],
+		popupDescription: ''
+	},
+	{
+		id: 2,
+		title: 'FEEL-FIT APP',
+		buttonLive: '',
+		buttonCode: '',
+		buttonInfo: '',
+		isLive: false,
+		imageUrl: feelFit,
+		description:
+			"App for the hackathon 'La Hackathon Del Dev' which starts on April 13th. This web application will request some personal information and, based on a few parameters, will provide users with a full week of meals and exercises that they can export in various formats.",
+		techLogos: ['/js.png', '/react.png'],
+		linkLive: '#',
+		linkCode: 'https://github.com/danipereiracodes/feel-fit-app',
+		technologies: ['Html', 'Tailwind css', 'Typescript', 'Reactjs', 'GPT-4'],
 		popupDescription: ''
 	}
 ]
